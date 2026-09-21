@@ -1,0 +1,8 @@
+.page-loader { display: flex; align-items: center; justify-content: center; min-height: 240px; }
+.page-loader__spinner {
+  width: 28px; height: 28px; border-radius: 50%;
+  border: 3px solid var(--color-border);
+  border-top-color: var(--color-primary);
+  animation: page-loader-spin 0.7s linear infinite;
+}
+@keyframes page-loader-spin { to { transform: rotate(360deg); } }

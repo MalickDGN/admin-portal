@@ -1,0 +1,10 @@
+node_modules
+dist
+storybook-static
+playwright-report
+test-results
+.env.local
+*.log
+.env.development
+.env.staging
+.env.production

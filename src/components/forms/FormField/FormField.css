@@ -1,0 +1,11 @@
+.form-field { display: flex; flex-direction: column; gap: 6px; margin-bottom: var(--space-md); }
+.form-field__label { font-size: 13px; font-weight: 500; color: var(--color-text-muted); }
+.form-field__control { position: relative; display: flex; align-items: center; }
+.form-field__input {
+  width: 100%; padding: 10px 12px; border-radius: var(--radius-md);
+  border: 1px solid var(--color-border); background: var(--color-background);
+  color: var(--color-text); font-size: 14px; outline: none;
+}
+.form-field__input:focus { border-color: var(--color-primary); }
+.form-field__input[aria-invalid="true"] { border-color: var(--color-danger); }
+.form-field__error { font-size: 12px; color: var(--color-danger); }

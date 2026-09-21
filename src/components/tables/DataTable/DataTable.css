@@ -1,0 +1,50 @@
+.data-table { display: flex; flex-direction: column; }
+.data-table__toolbar {
+  display: flex; align-items: center; justify-content: space-between; gap: var(--space-md);
+  padding: var(--space-md) var(--space-lg);
+  border-bottom: 1px solid var(--color-border);
+}
+.data-table__toolbar-right { display: flex; align-items: center; gap: var(--space-md); }
+.data-table__export-btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  border: 1px solid var(--color-border); background: transparent; cursor: pointer;
+  padding: 6px 12px; border-radius: var(--radius-md); font-size: 13px; font-weight: 500;
+  color: var(--color-text-muted);
+}
+.data-table__export-btn:hover { background: var(--color-surface-muted); color: var(--color-text); }
+.data-table__search {
+  display: flex; align-items: center; gap: var(--space-sm);
+  background: var(--color-surface-muted); border-radius: var(--radius-md);
+  padding: 8px 12px; max-width: 280px; flex: 1; color: var(--color-text-muted);
+}
+.data-table__search input { border: none; background: transparent; outline: none; width: 100%; color: var(--color-text); }
+.data-table__selection-count { font-size: 13px; color: var(--color-text-muted); white-space: nowrap; }
+
+.data-table__scroll { overflow-x: auto; }
+.data-table table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.data-table th {
+  text-align: left; padding: var(--space-sm) var(--space-lg);
+  font-size: 12px; text-transform: uppercase; color: var(--color-text-muted);
+  border-bottom: 1px solid var(--color-border); white-space: nowrap;
+}
+.data-table td { padding: var(--space-sm) var(--space-lg); border-bottom: 1px solid var(--color-border); white-space: nowrap; }
+.data-table__sort-btn {
+  display: inline-flex; align-items: center; gap: 4px;
+  background: none; border: none; cursor: pointer; color: inherit; font: inherit;
+  text-transform: uppercase; padding: 0;
+}
+.data-table__sort-btn--static { cursor: default; }
+.data-table__checkbox-col { width: 40px; }
+.data-table__actions-col { text-align: right; }
+.data-table__state { text-align: center; padding: var(--space-lg); color: var(--color-text-muted); }
+
+.data-table__pagination {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: var(--space-md) var(--space-lg); font-size: 13px; color: var(--color-text-muted);
+}
+.data-table__pagination-controls { display: flex; gap: var(--space-xs); }
+.data-table__pagination-controls button {
+  width: 28px; height: 28px; display: flex; align-items: center; justify-content: center;
+  border: 1px solid var(--color-border); border-radius: var(--radius-md); background: transparent; cursor: pointer;
+}
+.data-table__pagination-controls button:disabled { opacity: 0.4; cursor: not-allowed; }

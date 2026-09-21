@@ -1,0 +1,16 @@
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+.card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-md) var(--space-lg);
+  border-bottom: 1px solid var(--color-border);
+}
+.card__title { margin: 0; font-size: 16px; font-weight: 600; }
+.card__body { padding: var(--space-lg); }
+.card__body--flush { padding: 0; }

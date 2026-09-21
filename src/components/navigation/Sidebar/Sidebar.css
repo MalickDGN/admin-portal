@@ -1,0 +1,47 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-surface);
+  border-right: 1px solid var(--color-border);
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  overflow-y: auto;
+}
+.sidebar__brand {
+  display: flex; align-items: center; gap: var(--space-sm);
+  padding: var(--space-lg) var(--space-md);
+  font-weight: 700; font-size: 16px;
+}
+.sidebar__logo {
+  width: 32px; height: 32px; border-radius: var(--radius-md);
+  background: var(--color-primary); color: var(--color-text-inverted);
+  display: flex; align-items: center; justify-content: center; font-weight: 700;
+  flex-shrink: 0;
+}
+.sidebar__nav { flex: 1; padding: 0 var(--space-sm); display: flex; flex-direction: column; gap: 2px; }
+.sidebar__link {
+  display: flex; align-items: center; gap: var(--space-sm);
+  width: 100%; border: none; background: transparent; cursor: pointer;
+  padding: 10px 12px; border-radius: var(--radius-md);
+  color: var(--color-text-muted); font-size: 14px; font-weight: 500;
+  text-align: left;
+}
+.sidebar__link:hover { background: var(--color-surface-muted); color: var(--color-text); }
+.sidebar__link--active { background: color-mix(in srgb, var(--color-primary) 12%, transparent); color: var(--color-primary); }
+.sidebar__chevron { margin-left: auto; transition: transform 0.15s ease; }
+.sidebar__chevron--open { transform: rotate(180deg); }
+.sidebar__submenu { display: flex; flex-direction: column; padding-left: 40px; gap: 2px; }
+.sidebar__sublink { padding: 8px 12px; border-radius: var(--radius-md); font-size: 13px; color: var(--color-text-muted); }
+.sidebar__sublink:hover { color: var(--color-text); }
+.sidebar__sublink--active { color: var(--color-primary); font-weight: 600; }
+.sidebar__collapse-btn {
+  display: flex; align-items: center; gap: var(--space-sm); justify-content: center;
+  margin: var(--space-sm); padding: 8px; border: 1px solid var(--color-border);
+  border-radius: var(--radius-md); background: transparent; color: var(--color-text-muted);
+  cursor: pointer; font-size: 13px;
+}
+.sidebar--collapsed .sidebar__brand { justify-content: center; }
+@media (max-width: 768px) {
+  .sidebar { display: none; }
+}

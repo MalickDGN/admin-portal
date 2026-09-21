@@ -1,0 +1,13 @@
+{
+  "nav.dashboard": "Dashboard",
+  "nav.ecommerce": "E-commerce",
+  "nav.products": "Products",
+  "nav.orders": "Orders",
+  "nav.customers": "Customers",
+  "nav.settings": "Settings",
+  "action.save": "Save",
+  "action.cancel": "Cancel",
+  "state.loading": "Loading...",
+  "state.empty": "No data",
+  "state.error": "Something went wrong"
+}
